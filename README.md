@@ -1,13 +1,12 @@
 # PES-model
 
-This repository contains the source code for PES model, An Energy and Throughput Model for Energy Harvesting IoT Systems. Periodic Energy Har-
-vesting Systems (PES) model enables developers to explore energy versus throughput trade-offs early in the design process.
+This repository contains the source code for the PES model, An Energy and Throughput Model for Energy Harvesting IoT Systems. The Periodic Energy Harvesting Systems (PES) model enables developers to explore energy versus throughput trade-offs early in the design process.
 
-The README briefly describes how to use PES across different IoT benchmarks used to validate PES. The repository includes these files :
+The README briefly describes how to use PES across different IoT benchmarks. The repository includes these files :
 - PES_Model.py : Models the energy consumed by an IoT application during different states and predicts the number of shutdowns due to insufficient energy.
-- config.py : Contains collection of average harvesting power, wake up and shutdown threshols and system specific energy and power consumption constants.
-- Benchmarks.py : Includes IoT benchmarks and their specefic configuration. 
-- runme.py : Run PES model for specefic benchmark.
+- config.py : Contains a collection of average harvesting power, wake up and shutdown thresholds, and system specific energy and power consumption constants.
+- Benchmarks.py : Includes IoT benchmarks and their specific configuration. 
+- runme.py : Run PES model for a specific benchmark.
 
 # Setting up PES model
 
@@ -26,16 +25,20 @@ python3 runme.py
 ```
 #Using PES model
 * Select a benchmark from Benchmarks.py file
-* Determine Sampling frequency, communication incidence (for each sampling task), and communication events
+* Determine Sampling frequency (fs), communication incidence (ns for each sampling task), and communication events (nc) 
+* Write fs, ns, nc, and the benchmark's name like the following command inside the runme.py file. 
 
 ```
 HR = Benchmarks(1/8.0, [0, 20], 4, type='HR')
 ```
-In above line example 1/8.0 , [0, 20] and 4 are chosen sampling frequency, communication incidence (there is one type of sampling task), and communication events respectively for HR benchmark.
+For example, in the above command, 1/8.0, [0, 20], and 4 are chosen for sampling frequency, communication incidence (there is one type of sampling task in this example), and communication events, respectively, for HR benchmark.
+
 * Run the PES model:
+Write the following command inside the runme.py file
 ```
 HR.run_PES_Model()
 ```
+PES can predict infeasible, intermittent, and feasible systems by running python3 runme.py in the pes-model directory with the chosen configuration. In intermittent systems, PES also can predict the number of shutdowns (n_sd). 
 
 # Attribution and PES model-related Publications
 
