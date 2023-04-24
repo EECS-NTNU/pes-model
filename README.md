@@ -32,6 +32,10 @@ python3 runme.py
 HR = Benchmarks(1/8.0, [0, 20], 4, type='HR')
 ```
 In above line example 1/8.0 , [0, 20] and 4 are chosen sampling frequency, communication incidence (there is one type of sampling task), and communication events respectively for HR benchmark.
+* Run the PES model:
+```
+HR.run_PES_Model()
+```
 
 # Attribution and PES model-related Publications
 
