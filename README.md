@@ -25,7 +25,7 @@ python3 runme.py
 ```
 #Using PES model
 * Select a benchmark from Benchmarks.py file
-* Determine Sampling frequency (fs), communication incidence (ns for each sampling task), and communication events (nc) 
+* Determine sampling frequency (fs), communication incidence (ns for each sampling task), and communication events (nc) 
 * Write fs, ns, nc, and the benchmark's name like the following command inside the runme.py file. 
 
 ```
@@ -38,7 +38,9 @@ Write the following command inside the runme.py file
 ```
 HR.run_PES_Model()
 ```
-PES can predict infeasible, intermittent, and feasible systems by running python3 runme.py in the pes-model directory with the chosen configuration. In intermittent systems, PES also can predict the number of shutdowns (n_sd). 
+PES can predict infeasible, intermittent, and feasible systems by running python3 runme.py in the pes-model directory with the chosen configuration. In intermittent systems, PES also can predict the number of shutdowns (n_sd). There are more examples of different benchmarks in the runme.py file. 
+
+In addition to changing sampling frequency, communication incidence, and communication events, PES enables more exploration by changing average harvesting power, wake up and shutdown thresholds, etc.
 
 # Attribution and PES model-related Publications
 
