@@ -45,3 +45,15 @@ In addition to changing sampling frequency, communication incidence, and communi
 # Attribution and PES model-related Publications
 
 If used for research, please cite PES model by the following publication: 
+
+```
+@INPROCEEDINGS{PES_Model,
+  author={Ghasemi, Fatemeh and Liedtke, Lukas and Jahre, Magnus},
+  booktitle={2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)}, 
+  title={PES: An Energy and Throughput Model for Energy Harvesting IoT Systems}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={13-23},
+  doi={10.1109/ISPASS57527.2023.00011}}
+```
